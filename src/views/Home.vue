@@ -6,6 +6,8 @@
   <Skills />
   <ProjectDetail />
   <Contact />
+
+  <Foot_er />
 </template>
 
 <script setup>
@@ -15,6 +17,7 @@ import AboutMe from "@/components/AboutMe.vue";
 import Skills from "@/components/Skills.vue";
 import ProjectDetail from "@/components/ProjectDetail.vue";
 import Contact from "@/components/Contact.vue";
+import Foot_er from "@/components/Foot_er.vue";
 </script>
 
 <style scoped>
