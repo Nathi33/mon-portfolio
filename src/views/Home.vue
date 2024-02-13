@@ -3,12 +3,14 @@
 
   <Welcome />
   <AboutMe />
+  <Skills />
 </template>
 
 <script setup>
 import Head_er from "@/components/Head_er.vue";
 import Welcome from "@/components/Welcome.vue";
 import AboutMe from "@/components/AboutMe.vue";
+import Skills from "@/components/Skills.vue";
 </script>
 
 <style scoped>
