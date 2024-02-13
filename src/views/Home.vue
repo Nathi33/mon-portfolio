@@ -5,6 +5,7 @@
   <AboutMe />
   <Skills />
   <ProjectDetail />
+  <Contact />
 </template>
 
 <script setup>
@@ -13,6 +14,7 @@ import Welcome from "@/components/Welcome.vue";
 import AboutMe from "@/components/AboutMe.vue";
 import Skills from "@/components/Skills.vue";
 import ProjectDetail from "@/components/ProjectDetail.vue";
+import Contact from "@/components/Contact.vue";
 </script>
 
 <style scoped>
