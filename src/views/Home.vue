@@ -20,16 +20,4 @@ import Contact from "@/components/Contact.vue";
 import Foot_er from "@/components/Foot_er.vue";
 </script>
 
-<style scoped>
-h1 {
-  font-size: 50px;
-}
-
-li {
-  list-style: none;
-}
-
-a {
-  text-decoration: none;
-}
-</style>
+<style scoped></style>

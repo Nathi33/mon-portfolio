@@ -1,1 +1,19 @@
 @import "../css/base.css";
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Poppins", sans-serif;
+  font-style: none;
+  line-height: 1;
+}
