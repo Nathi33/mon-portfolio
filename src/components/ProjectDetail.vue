@@ -90,7 +90,7 @@ const openModal = (titre) => {
     modalImage.value = "../assets/images/logo-linked.png";
   } else if (titre === "Contenu DEC") {
     modalVisible.value = true;
-    modalTitre.value = "Dynamisme d'un Commentaire";
+    modalTitre.value = "Dynamisme du Commentaire";
     modalDate.value = "Novembre 2023";
     modalDescription.value =
       "Cette mission consiste à dynamiser un espace commentaire afin de faire apparaître un nouveau commentaire directement dans la liste des commentaires au moment où on valide le formulaire, avec réinitialisation des champs, sans aucun rechargement de la page et affichage d'un message d'erreur.";

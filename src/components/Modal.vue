@@ -4,7 +4,39 @@
 
     <div class="modal-card">
       <div class="modal-card-left">
-        <img :src="modalImage" alt="Image projet" />
+        <!-- Contenu CV -->
+        <img
+          v-if="titre === 'Mon Curriculum Vitae'"
+          src="@/assets/images/cv-detail1.png"
+          alt="CV Image 1"
+        />
+        <img
+          v-if="titre === 'Mon Curriculum Vitae'"
+          src="@/assets/images/cv-detail2.png"
+          alt="CV Image 2"
+        />
+        <!-- Contenu DCD -->
+        <img
+          v-if="titre === 'Réalisation Cahier des Charges'"
+          src="@/assets/images/CDC-detail1.png"
+          alt="CDC Image 1"
+        />
+        <img
+          v-if="titre === 'Réalisation Cahier des Charges'"
+          src="@/assets/images/CDC-detail2.png"
+          alt="CDC Image 2"
+        />
+        <!-- Contenu DEC -->
+        <img
+          v-if="titre === 'Dynamisme du Commentaire'"
+          src="@/assets/images/DEC-detail1.png"
+          alt="DEC Image 1"
+        />
+        <img
+          v-if="titre === 'Dynamisme du Commentaire'"
+          src="@/assets/images/DEC-detail2.png"
+          alt="DEC Image 2"
+        />
       </div>
       <div class="modal-card-right">
         <button class="btn-modal" @click="toggleModal">&times;</button>
@@ -36,7 +68,6 @@ const {
   technologies,
   lien,
   lienTexte,
-  modalImage,
 } = defineProps([
   "modalVisible",
   "titre",
@@ -45,7 +76,6 @@ const {
   "technologies",
   "lien",
   "lienTexte",
-  "modalImage",
 ]);
 
 // Émetteur d'événements
@@ -59,6 +89,12 @@ const toggleModal = () => {
 </script>
 
 <style scoped>
+img {
+  width: 20px;
+  height: auto;
+  object-fit: contain;
+}
+
 a {
   text-decoration: none;
   color: black;
@@ -92,12 +128,24 @@ a:hover {
 .modal-card {
   background-color: white;
   color: #333;
-  width: 40%;
+  display: flex;
+  width: 60%;
   padding: 20px;
   border-radius: 5px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
   position: fixed;
   transition: all 0.5s;
+}
+
+.modal-card-right {
+  padding-left: 20px;
+}
+
+.modal-card-left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
 }
 
 .btn-modal {
