@@ -100,12 +100,11 @@ const scrollToSection = (sectionId) => {
 </script>
 
 <style scoped>
-/*Essai*/
-.header a.active {
+.header .menu_navBar a.active {
   text-decoration: underline;
-  color: rgb(26, 112, 146); /* Ajoutez la couleur souhaitée */
+  color: rgb(26, 112, 146);
 }
-/*Fin Essai*/
+
 .header {
   background-color: #ffffff;
   position: sticky;
@@ -149,6 +148,7 @@ const scrollToSection = (sectionId) => {
 .header a.active {
   text-decoration: underline;
 }
+
 .social_link img {
   width: 20px;
   height: 20px;

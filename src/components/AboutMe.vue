@@ -33,28 +33,49 @@
 
 <style scoped>
 .description h1 {
-  font-size: 50px;
+  font-size: 2.5rem;
 }
+
 .aboutme {
-  padding-top: 100px;
-  padding-bottom: 100px;
+  padding-top: 3%;
+  padding-bottom: 5%;
   display: flex;
-}
-.aboutme_img {
-  display: flex;
-}
-.aboutme_img img {
-  object-fit: contain;
-  max-width: 80%;
-  height: auto;
-}
-.aboutme_description {
-  display: flex;
-  padding-left: 80px;
-  padding-right: 80px;
-  text-align: justify;
-}
-.description {
+  flex-direction: column; /* Affichage en colonne par défaut, changement en fonction de la largeur de l'écran */
   align-items: center;
+}
+
+.aboutme_img img {
+  display: flex;
+  align-items: center;
+  object-fit: contain;
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 2%;
+}
+
+.aboutme_description {
+  text-align: justify;
+  padding: 2%;
+}
+
+.description {
+  display: flex;
+  flex-direction: column; /* Alignement en colonne pour les petits écrans */
+  align-items: center;
+}
+
+/* Ajustement pour grand écran */
+@media screen and (min-width: 768px) {
+  .aboutme {
+    flex-direction: row; /* Affichage en ligne pour les écrans plus larges */
+  }
+
+  .aboutme_img {
+    margin-right: 4%; /* Espacement entre l'image et le texte */
+  }
+
+  .description {
+    align-items: flex-start; /* Alignement à gauche pour les grands écrans */
+  }
 }
 </style>

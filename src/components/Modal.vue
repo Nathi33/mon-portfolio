@@ -102,6 +102,7 @@ a {
 
 a:hover {
   text-decoration: underline;
+  font-weight: bold;
 }
 
 .bloc-modal {
@@ -135,6 +136,7 @@ a:hover {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
   position: fixed;
   transition: all 0.5s;
+  overflow-y: auto;
 }
 
 .modal-card-right {
@@ -177,5 +179,12 @@ a:hover {
   width: 100%;
   height: auto;
   object-fit: contain;
+}
+
+@media screen and (max-width: 750px) {
+  .modal-card {
+    width: 90%;
+    height: 80%;
+  }
 }
 </style>

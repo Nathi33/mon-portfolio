@@ -24,41 +24,42 @@
 span {
   text-transform: uppercase;
 }
+
 .hero {
   background-color: rgba(182, 121, 182, 0.849);
   display: flex;
-  justify-content: space-around;
+  flex-direction: column; /* Affichage en colonne par défaut, changement en fonction de la largeur de l'écran */
   align-items: center;
-  padding: 80px 20px 90px 0;
+  padding: 5%;
 }
+
 .hero .title {
-  font-size: 40px;
+  font-size: 2.5rem;
   text-shadow: 2px 2px 4px white;
   font-weight: bold;
   line-height: 1.5;
+  text-align: start;
+  margin-top: 1rem; /* Espacement du titre par rapport au span */
 }
+
 .hero_left {
   animation-duration: 1s;
   animation-name: slideInLeft;
-  padding-left: 70px;
+  padding: 0; /* Suppression du padding à gauche */
 }
+
 .hero_right {
   animation-duration: 1s;
   animation-name: slideInRight;
-  padding-right: 80px;
-  padding-left: 90px;
-}
-.hero-img img {
-  width: 200%;
-  border-radius: 50%;
-  background-color: white;
+  margin-top: 2rem; /* Espacement du bloc droit par rapport au bloc gauche */
 }
 
-@media screen and (min-width: 750px) {
-  .hero-img img {
-    width: 400px;
-    height: 400px;
-  }
+.hero-img img {
+  width: 100%; /* Utilisation de la largeur maximale */
+  max-width: 400px; /* Largeur maximale pour les écrans plus larges */
+  height: auto;
+  border-radius: 50%;
+  background-color: white;
 }
 
 /* Effet d'animation */
@@ -77,6 +78,38 @@ span {
   }
   to {
     transform: translateX(0%);
+  }
+}
+
+/* Ajustement pour grand écran */
+@media screen and (min-width: 750px) {
+  .hero {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .hero-img img {
+    width: 400px;
+    height: 400px;
+  }
+}
+
+/* Ajustement pour petit écran */
+@media screen and (max-width: 750px) {
+  .hero {
+    flex-direction: column-reverse; /* Inversion de la direction pour les petits écrans */
+    align-items: center; /* Centrage des éléments */
+  }
+
+  .hero_right {
+    margin-top: 3rem; /* Ajuste la marge entre le bloc droit et le bloc gauche */
+  }
+
+  .hero-img img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 50%;
+    margin-bottom: 1.5rem; /* Ajoute de l'espace entre l'avatar et le texte */
   }
 }
 </style>
