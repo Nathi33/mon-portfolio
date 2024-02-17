@@ -14,7 +14,7 @@
       </div>
       <small
         >Dernière mise à jour le
-        <time datetime="2024-02-13">13 février 2024</time></small
+        <time datetime="2024-02-13">20 février 2024</time></small
       >
     </div>
   </footer>
@@ -30,14 +30,21 @@
   align-items: center;
   gap: 10px;
   padding-top: 20px;
+  text-align: center;
+}
+
+.logo {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
 }
 
 .logo img {
-  width: 30px; /*40px*/
-  height: 30px; /*40px*/
+  width: 30px;
+  height: 30px;
   object-fit: cover;
-  padding-left: 5px; /*10px*/
-  padding-bottom: 5px; /*10px*/
+  padding-left: 5px;
+  padding-bottom: 5px;
 }
 
 .logo img:hover {

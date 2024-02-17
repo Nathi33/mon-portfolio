@@ -1,8 +1,8 @@
 <template>
-  <div>
+  <div class="error-container">
     <img src="../assets/images/oops.png" alt="oops" />
-    <h1>Error 404 - Page Not Found</h1>
-    <p>Désolé,nous ne trouvons pas la page demandée.</p>
+    <h1 class="error-title">Error 404 - Page Not Found</h1>
+    <p class="error-message">Désolé,nous ne trouvons pas la page demandée.</p>
     <router-link class="link" to="/">Retourner à la page d'accueil</router-link>
   </div>
 </template>
@@ -10,8 +10,14 @@
 <script setup></script>
 
 <style scoped>
-div {
+.error-container {
   text-align: center;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 30 rem;
 }
 
 img {
@@ -19,21 +25,26 @@ img {
   max-width: 300px;
 }
 
-h1 {
-  font-size: 40px;
+.error-title {
+  font-size: 2rem;
   margin-top: 20px;
   margin-bottom: 10px;
 }
 
-p {
-  font-size: 20px;
+.error-message {
+  font-size: 1rem;
   margin-bottom: 20px;
 }
 
 .link {
-  font-size: 20px;
+  font-size: 1rem;
   color: rgba(182, 121, 182, 0.849);
   font-weight: bold;
   text-decoration: none;
+  transition: color 0.3s;
+}
+
+.link:hover {
+  color: #551a8b;
 }
 </style>

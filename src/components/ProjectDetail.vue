@@ -43,7 +43,6 @@
           :technologies="modalTechnologies"
           :lien="modalLien"
           :lienTexte="modalLienTexte"
-          :modalImage="modalImage"
           @toggleModal="toggleModal"
         />
       </div>
@@ -63,7 +62,6 @@ const modalDescription = ref("");
 const modalTechnologies = ref([]);
 const modalLien = ref("");
 const modalLienTexte = ref("");
-const modalImage = ref("");
 
 //Fonction pour ouvrir la modal
 const openModal = (titre) => {
@@ -76,7 +74,6 @@ const openModal = (titre) => {
     modalTechnologies.value = ["HTML", "CSS", "GitHub"];
     modalLien.value = "https://github.com/Nathi33/depot-cv.git";
     modalLienTexte.value = "Mon CV";
-    modalImage.value = "../assets/images/cv-detail1.png";
   } else if (titre === "Contenu CDC") {
     modalVisible.value = true;
     modalTitre.value = "Réalisation Cahier des Charges";
@@ -87,7 +84,6 @@ const openModal = (titre) => {
     modalLien.value =
       "https://drive.google.com/file/d/1-TaB3q3MqGEAv8nX8KMRMBaqoJvCidJt/view?usp=sharing";
     modalLienTexte.value = "Cahier des charges";
-    modalImage.value = "../assets/images/logo-linked.png";
   } else if (titre === "Contenu DEC") {
     modalVisible.value = true;
     modalTitre.value = "Dynamisme du Commentaire";
@@ -97,7 +93,6 @@ const openModal = (titre) => {
     modalTechnologies.value = ["HTML", "CSS", "JavaScript", "GitHub"];
     modalLien.value = "https://github.com/Nathi33/dynamiser_commentaire.git";
     modalLienTexte.value = "Dynamiser un commentaire";
-    modalImage.value = "../assets/images/commentaire-detail.png";
   }
 
   //Afficher la modal
@@ -115,15 +110,18 @@ const toggleModal = () => {
   padding-top: 40px;
   padding-bottom: 60px;
 }
+
 .project_title {
   text-align: center;
   font-size: 50px;
   padding-bottom: 50px;
 }
+
 .project img {
   width: 150px;
   height: 230px;
 }
+
 .project {
   display: flex;
   justify-content: space-around;
@@ -150,9 +148,10 @@ const toggleModal = () => {
 }
 
 .card h3 {
-  font-size: 12px;
+  font-size: 0.6rem;
   text-align: center;
 }
+
 .card_overlay {
   background-color: rgba(0, 0, 0, 0.8);
   /* L'élément est retiré du flux normal et aucun espace n'est créé pour l'élément sur la page. Il est ensuite positionné par rapport à son ancêtre le plus proche */
@@ -166,6 +165,7 @@ const toggleModal = () => {
   top: 110%;
   transition: all 0.3s;
 }
+
 .btn-open {
   font-size: 75px;
   background-color: transparent;
@@ -182,8 +182,17 @@ const toggleModal = () => {
   box-shadow: 12px 12px 5px rgba(106, 206, 219, 0.5);
   z-index: 10;
 }
+
 .card:hover .card_overlay {
   /*Effet de style de l'overlay*/
   top: 0;
+}
+
+/* Ajustement pour petit écran */
+@media screen and (max-width: 768px) {
+  .project {
+    flex-direction: column; /* Changer la direction de flex en colonne pour les petits écrans */
+    align-items: center;
+  }
 }
 </style>

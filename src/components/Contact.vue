@@ -88,7 +88,7 @@ const submitForm = () => {
 
 <style scoped>
 h1 {
-  font-size: 50px;
+  font-size: 2.5rem;
 }
 .contact-container {
   background-color: rgba(182, 121, 182, 0.849);
@@ -100,10 +100,17 @@ h1 {
   padding-bottom: 30px;
 }
 
+.form {
+  max-width: 600px;
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box; /* pour que le padding ne soit pas ajouté à la largeur du formulaire */
+}
+
 .form input,
 .form textarea {
   display: block;
-  width: 600px; /*100%*/
+  width: 100%;
   padding: 8px;
   margin-bottom: 20px;
   border: black 2px solid;
@@ -126,5 +133,17 @@ h1 {
   cursor: pointer;
   background-color: #333;
   color: #fff;
+}
+
+/* Ajustement pour les petits écrans */
+@media screen and (max-width: 768px) {
+  .form input,
+  .form textarea {
+    width: 100%; /* Utilise la largeur complète pour les écrans plus petits */
+  }
+
+  .form .btn {
+    width: auto; /* Rétablit la largeur automatique pour les boutons */
+  }
 }
 </style>
