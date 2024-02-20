@@ -16,7 +16,7 @@
         </div>
 
         <div class="card" data-category="cahier_charges">
-          <img src="../assets/images/La socketterie.png" alt="socketterie" />
+          <img src="../assets/images/la-socketterie.png" alt="socketterie" />
           <h3>Cahier des Charges : La Socketterie</h3>
           <div class="card_overlay">
             <button class="btn-open" @click="openModal('Contenu CDC')">

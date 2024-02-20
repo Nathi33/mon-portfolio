@@ -44,44 +44,6 @@
         </li>
       </ul>
     </nav>
-
-    <div class="social">
-      <ul class="social_link">
-        <li>
-          <!--L'attribut "rel" sert à améliorer la  sécurité des liens externes en protégeant contre  certaines attaques-->
-          <a
-            target="_blank"
-            href="https://facebook.com/"
-            rel="noopener noreferrer"
-            ><img src="../assets/images/facebook.png" alt="logo facebook"
-          /></a>
-        </li>
-        <li>
-          <a
-            target="_blank"
-            href="https://fr.linkedin.com/"
-            rel="noopener noreferrer"
-            ><img src="../assets/images/linkedin.png" alt="logo linkedin"
-          /></a>
-        </li>
-        <li>
-          <a
-            target="_blank"
-            href="https://twitter.com/?lang=fr"
-            rel="noopener noreferrer"
-            ><img src="../assets/images/twitter.png" alt="logo twitter"
-          /></a>
-        </li>
-        <li>
-          <a
-            target="_blank"
-            href="https://instagram.com/"
-            rel="noopener noreferrer"
-            ><img src="../assets/images/instagram.png" alt="logo instagram"
-          /></a>
-        </li>
-      </ul>
-    </div>
   </header>
 </template>
 
@@ -111,7 +73,11 @@ const scrollToSection = (sectionId) => {
   z-index: 100;
   top: 0;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
+}
+
+.navBar {
+  margin-left: 11rem;
 }
 
 .header .logo {
@@ -127,16 +93,8 @@ const scrollToSection = (sectionId) => {
   align-items: center;
 }
 
-.header .social_link {
-  padding-right: 30px;
-}
-
 .header .menu_navBar li {
   padding: 0 1.5rem;
-}
-
-.header .social_link li {
-  padding: 0 0.5rem;
 }
 
 .header .logo:hover,
@@ -149,13 +107,11 @@ const scrollToSection = (sectionId) => {
   text-decoration: underline;
 }
 
-.social_link img {
-  width: 20px;
-  height: 20px;
-}
-
 /*Adaptation de la barre de navigation pour les écrans de taille inférieure à 750px*/
 @media screen and (max-width: 749px) {
+  .navBar {
+    margin-left: 0;
+  }
   .header li {
     list-style: none;
     display: flex;
