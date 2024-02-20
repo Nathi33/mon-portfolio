@@ -2,13 +2,32 @@
   <footer>
     <div class="footer">
       <div class="logo">
-        <a target="_blank" href="https://fr.linkedin.com/"
+        <!--L'attribut "rel" sert à améliorer la  sécurité des liens externes en protégeant contre  certaines attaques-->
+        <a
+          target="_blank"
+          href="https://fr.linkedin.com/"
+          rel="noopener noreferrer"
           ><img src="../assets/images/logo-linked.png" alt="Logo Linkedin" />
         </a>
-        <a target="_blank" href="https://twitter.com/?lang=fr"
+        <a
+          target="_blank"
+          href="https://twitter.com/?lang=fr"
+          rel="noopener noreferrer"
           ><img src="../assets/images/logo-twitter.png" alt="Logo Twitter" />
         </a>
-        <a target="_blank" href="https://github.com/"
+        <a
+          target="_blank"
+          href="https://instagram.com/"
+          rel="noopener noreferrer"
+          ><img src="../assets/images/instagram.png" alt="logo instagram"
+        /></a>
+        <a
+          target="_blank"
+          href="https://facebook.com/"
+          rel="noopener noreferrer"
+          ><img src="../assets/images/facebook.png" alt="Logo Facebook" />
+        </a>
+        <a target="_blank" href="https://github.com/" rel="noopener noreferrer"
           ><img src="../assets/images/logo-git.png" alt="Logo GitHub" />
         </a>
       </div>
