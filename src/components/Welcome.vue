@@ -2,11 +2,8 @@
   <section id="welcome">
     <div class="hero">
       <div class="hero_left">
-        <span>Développeur Web</span>
-        <h1 class="title">
-          Je suis Nath Drnt, une jeune développeuse en herbe
-        </h1>
-        <p>Bienvenue sur mon Portfolio</p>
+        <h1 class="title">Bienvenue sur mon Portfolio</h1>
+        <h2 class="sentence">Nath Drnt, une jeune développeuse en herbe</h2>
       </div>
 
       <div class="hero_right">
@@ -21,10 +18,6 @@
 <script setup></script>
 
 <style scoped>
-span {
-  text-transform: uppercase;
-}
-
 .hero {
   background-color: rgba(182, 121, 182, 0.849);
   display: flex;
@@ -40,6 +33,13 @@ span {
   line-height: 1.5;
   text-align: start;
   margin-top: 1rem; /* Espacement du titre par rapport au span */
+}
+
+.hero .sentence {
+  font-weight: normal;
+  font-size: 1.5rem;
+  text-align: start;
+  margin-top: 5rem; /* Espacement de la phrase par rapport au titre */
 }
 
 .hero_left {

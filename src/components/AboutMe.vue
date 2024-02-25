@@ -10,11 +10,11 @@
           <p>
             Après de nombreuses années dans le secteur du paramédical et du
             secrétariat, j'ai décidé de donner un nouveau souffle à ma carrière
-            et d'oser tenter l'aventure du "Développement Web".<br />
+            et de me lancer dans l'aventure du "Développement Web".<br />
             J'ai commencé par suivre des formations dispensées sur internet via
             OpenCLassRooms ou encore Le Réacteur afin de m'initier au code.
             Cette première approche m'a permis de me conforter dans l'idée de
-            faire du Développement ma nouvelle vocation. J'ai donc débuter ma
+            faire du Développement ma nouvelle vocation. J'ai donc débuté ma
             formation de Développeur Web et Mobile au sein du Centre Européen de
             Formation. Depuis, je code quotidiennement avec chaque jour
             davantage de passion.<br />Si je ne suis encore que "junior" en

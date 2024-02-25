@@ -70,7 +70,7 @@ const openModal = (titre) => {
     modalTitre.value = "Mon Curriculum Vitae";
     modalDate.value = "Juillet 2023";
     modalDescription.value =
-      "Le projet de réalisation du CV est le premier réalisé durant ma formation au sein du Centre Européen de Formation. L'objectif était de mettre en application mes connaissances en HTML et CSS acquises afin de faire créer un CV en ligne dynamique.";
+      "Cette réalisation est le premier projet fait durant mon apprentissage au sein du Centre Européen de Formation. L'objectif était de mettre en application mes connaissances en HTML et CSS acquises afin de créer un CV en ligne dynamique.";
     modalTechnologies.value = ["HTML", "CSS", "GitHub"];
     modalLien.value = "https://github.com/Nathi33/depot-cv.git";
     modalLienTexte.value = "Mon CV";
@@ -79,7 +79,7 @@ const openModal = (titre) => {
     modalTitre.value = "Réalisation Cahier des Charges";
     modalDate.value = "Octobre 2023";
     modalDescription.value =
-      "Etablissement d'un cahier des charges pour un projet de création de site web e-commerce pour une entreprise de vente de chaussettes. ";
+      "Etablissement d'un cahier des charges dans un projet de création de site web e-commerce pour une entreprise de vente de chaussettes. ";
     modalTechnologies.value = ["Word", "Miro", "GlooMaps"];
     modalLien.value =
       "https://drive.google.com/file/d/1-TaB3q3MqGEAv8nX8KMRMBaqoJvCidJt/view?usp=sharing";
@@ -89,7 +89,7 @@ const openModal = (titre) => {
     modalTitre.value = "Dynamisme du Commentaire";
     modalDate.value = "Novembre 2023";
     modalDescription.value =
-      "Cette mission consiste à dynamiser un espace commentaire afin de faire apparaître un nouveau commentaire directement dans la liste des commentaires au moment où on valide le formulaire, avec réinitialisation des champs, sans aucun rechargement de la page et affichage d'un message d'erreur.";
+      "Cette mission consiste à dynamiser un espace commentaire afin d'y faire apparaître un nouveau directement dans la liste au moment où l'on valide le formulaire, avec réinitialisation des champs, sans aucun rechargement de la page et affichage d'un message d'erreur.";
     modalTechnologies.value = ["HTML", "CSS", "JavaScript", "GitHub"];
     modalLien.value = "https://github.com/Nathi33/dynamiser_commentaire.git";
     modalLienTexte.value = "Dynamiser un commentaire";
