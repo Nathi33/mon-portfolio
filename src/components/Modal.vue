@@ -49,6 +49,7 @@
         <p>{{ description }}</p>
         <h5>Technologies Utilisées</h5>
         <ul>
+          <!-- Chaque élément de la liste li aura le texte correspondant à l'élément actuel du tableau technologies -->
           <li v-for="techno in technologies" :key="techno">{{ techno }}</li>
         </ul>
         <h5>Lien</h5>

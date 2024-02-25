@@ -33,7 +33,7 @@
       </div>
       <small
         >Dernière mise à jour le
-        <time datetime="2024-02-13">20 février 2024</time></small
+        <time datetime="2024-02-25">25 février 2024</time></small
       >
     </div>
   </footer>
