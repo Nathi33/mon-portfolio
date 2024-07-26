@@ -3,48 +3,23 @@
     <div class="overlay-modal" @click="toggleModal"></div>
 
     <div class="modal-card">
-      <div class="modal-card-left">
-        <!-- Contenu CV -->
+      <figure class="modal-card-left">
+        <!-- Boucle pour générer les images à partir du tableau images -->
         <img
-          v-if="titre === 'Mon Curriculum Vitae'"
-          src="@/assets/images/cv-detail1.png"
-          alt="CV Image 1"
+          v-for="(image, index) in images"
+          :key="index"
+          :src="image.src"
+          alt="Image du projet"
         />
-        <img
-          v-if="titre === 'Mon Curriculum Vitae'"
-          src="@/assets/images/cv-detail2.png"
-          alt="CV Image 2"
-        />
-        <!-- Contenu DCD -->
-        <img
-          v-if="titre === 'Réalisation Cahier des Charges'"
-          src="@/assets/images/CDC-detail1.png"
-          alt="CDC Image 1"
-        />
-        <img
-          v-if="titre === 'Réalisation Cahier des Charges'"
-          src="@/assets/images/CDC-detail2.png"
-          alt="CDC Image 2"
-        />
-        <!-- Contenu DEC -->
-        <img
-          v-if="titre === 'Dynamisme du Commentaire'"
-          src="@/assets/images/DEC-detail1.png"
-          alt="DEC Image 1"
-        />
-        <img
-          v-if="titre === 'Dynamisme du Commentaire'"
-          src="@/assets/images/DEC-detail2.png"
-          alt="DEC Image 2"
-        />
-      </div>
+      </figure>
+
       <div class="modal-card-right">
         <button class="btn-modal" @click="toggleModal">&times;</button>
         <h4>{{ titre }}</h4>
-        <div class="date">
-          <img src="../assets/images/calendrier.png" alt="calendrier" />
+        <figure class="date">
+          <img src="../assets/images/calendrier.png" alt="logo calendrier" />
           <p>{{ date }}</p>
-        </div>
+        </figure>
         <h5>Description</h5>
         <p>{{ description }}</p>
         <h5>Technologies Utilisées</h5>
@@ -69,6 +44,7 @@ const {
   technologies,
   lien,
   lienTexte,
+  images,
 } = defineProps([
   "modalVisible",
   "titre",
@@ -77,6 +53,7 @@ const {
   "technologies",
   "lien",
   "lienTexte",
+  "images",
 ]);
 
 // Émetteur d'événements

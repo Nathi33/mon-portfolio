@@ -1,31 +1,33 @@
 <template>
-  <section id="skills">
-    <div class="skills">
-      <h1>Compétences</h1>
-      <div class="skills_description">
-        <div class="technique">
-          <h2>Compétences techniques</h2>
-          <img src="../assets/images/Logos.jpg" alt="logos compétences" />
-        </div>
-        <div class="transverse">
-          <h2>Compétences transversales</h2>
-          <ul>
-            <li>Autonomie</li>
-            <li>Rigueur et efficacité</li>
-            <li>Aisance relationnelle</li>
-            <li>Ecoute et adaptabilité</li>
-            <li>Travail en équipe</li>
-          </ul>
+  <main class="my_skills">
+    <section id="skills">
+      <div class="skills">
+        <h2>Compétences</h2>
+        <div class="skills_description">
+          <figure class="technique">
+            <h3>Compétences techniques</h3>
+            <img src="../assets/images/Logos.jpg" alt="logos compétences" />
+          </figure>
+          <div class="transverse">
+            <h3>Compétences transversales</h3>
+            <ul>
+              <li>Autonomie</li>
+              <li>Rigueur et efficacité</li>
+              <li>Aisance relationnelle</li>
+              <li>Ecoute et adaptabilité</li>
+              <li>Travail en équipe</li>
+            </ul>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
+  </main>
 </template>
 
 <script setup></script>
 
 <style scoped>
-.skills h1 {
+.skills h2 {
   font-size: 2.5rem;
   text-align: center;
   padding-bottom: 1.5rem;
@@ -53,6 +55,10 @@
   display: flex;
   flex-direction: column; /* Affichage en colonne par défaut, changement en fonction de la largeur de l'écran */
   align-items: center;
+}
+
+.transverse {
+  margin-top: 16px;
 }
 
 .technique img {
@@ -89,7 +95,7 @@
 
 /* Ajustement des styles pour petit écran */
 @media screen and (max-width: 750px) {
-  h2 {
+  h3 {
     font-size: 1.3rem;
   }
 }
