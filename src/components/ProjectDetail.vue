@@ -1,58 +1,127 @@
 <template>
-  <section id="projectDetail">
-    <div class="project_global">
-      <h1 class="project_title">Projets</h1>
+  <main class="projects">
+    <section id="projectDetail">
+      <div class="project_global">
+        <h2 class="project_title">Projets</h2>
 
-      <div class="project">
-        <div class="card" data-category="cv">
-          <img src="../assets/images/cv.png" alt="cv" />
-          <h3>Mon Curriculum Vitae</h3>
-          <!--Overlay = recouvrement -->
-          <div class="card_overlay">
-            <!--Utilisation de @click pour déclencher une méthode-->
-            <button class="btn-open" @click="openModal('Contenu CV')">+</button>
-            <!-- Passer modalVisible comme prop à Essai et écouter l'évènement closeModal -->
+        <div class="project">
+          <!-- Boucle pour générer les modales à partir du tableau projects -->
+          <div
+            class="card"
+            v-for="(project, index) in projects"
+            :key="index"
+            :data-category="project.category"
+          >
+            <img :src="project.imgSrc" alt="project.imgAlt" />
+            <h3>{{ project.title }}</h3>
+            <div class="card_overlay">
+              <button class="btn-open" @click="openModal(project)">+</button>
+            </div>
           </div>
-        </div>
 
-        <div class="card" data-category="cahier_charges">
-          <img src="../assets/images/la-socketterie.png" alt="socketterie" />
-          <h3>Cahier des Charges : La Socketterie</h3>
-          <div class="card_overlay">
-            <button class="btn-open" @click="openModal('Contenu CDC')">
-              +
-            </button>
-          </div>
+          <Modal
+            :modalVisible="modalVisible"
+            :titre="modalTitre"
+            :date="modalDate"
+            :description="modalDescription"
+            :technologies="modalTechnologies"
+            :lien="modalLien"
+            :lienTexte="modalLienTexte"
+            :images="modalImages"
+            @toggleModal="toggleModal"
+          />
         </div>
-
-        <div class="card" data-category="dynamiser_commentaire">
-          <img src="../assets/images/Commentaire.png" alt="commentaite" />
-          <h3>Dynamisme d'un espace commentaire</h3>
-          <div class="card_overlay">
-            <button class="btn-open" @click="openModal('Contenu DEC')">
-              +
-            </button>
-          </div>
-        </div>
-
-        <Modal
-          :modalVisible="modalVisible"
-          :titre="modalTitre"
-          :date="modalDate"
-          :description="modalDescription"
-          :technologies="modalTechnologies"
-          :lien="modalLien"
-          :lienTexte="modalLienTexte"
-          @toggleModal="toggleModal"
-        />
       </div>
-    </div>
-  </section>
+    </section>
+  </main>
 </template>
 
 <script setup>
 import { ref } from "vue";
 import Modal from "@/components/Modal.vue";
+
+import img1 from "../assets/images/cv.png";
+import img2 from "../assets/images/la-socketterie.png";
+import img3 from "../assets/images/Commentaire.png";
+import img4 from "../assets/images/cv-detail1.png";
+import img5 from "../assets/images/cv-detail2.png";
+import img6 from "../assets/images/CDC-detail1.png";
+import img7 from "../assets/images/CDC-detail2.png";
+import img8 from "../assets/images/DEC-detail1.png";
+import img9 from "../assets/images/DEC-detail2.png";
+
+// Définition des projets avec les données nécessaires pour chaque projet
+const projects = [
+  {
+    category: "cv",
+    imgSrc: img1,
+    imgAlt: "Photo du CV",
+    title: "Mon Curriculum Vitae",
+    modalData: {
+      titre: "Mon Curriculum Vitae",
+      date: "Juillet 2023",
+      description:
+        "Cette réalisation est le premier projet fait durant mon apprentissage au sein du Centre Européen de Formation. L'objectif était de mettre en application mes connaissances en HTML et CSS acquises afin de créer un CV en ligne dynamique.",
+      technologies: ["HTML", "CSS", "GitHub"],
+      lien: "https://github.com/Nathi33/depot-cv.git",
+      lienTexte: "Mon CV",
+      images: [
+        {
+          src: img4,
+        },
+        {
+          src: img5,
+        },
+      ],
+    },
+  },
+  {
+    category: "cahier_charges",
+    imgSrc: img2,
+    imgAlt: "Photo du projet la Socketterie",
+    title: "Réalisation Cahier des Charges",
+    modalData: {
+      titre: "Réalisation Cahier des Charges",
+      date: "Octobre 2023",
+      description:
+        "Etablissement d'un cahier des charges dans un projet de création de site web e-commerce pour une entreprise de vente de chaussettes.",
+      technologies: ["Word", "Miro", "GlooMaps"],
+      lien: "https://drive.google.com/file/d/1-TaB3q3MqGEAv8nX8KMRMBaqoJvCidJt/view?usp=sharing",
+      lienTexte: "Cahier des charges",
+      images: [
+        {
+          src: img6,
+        },
+        {
+          src: img7,
+        },
+      ],
+    },
+  },
+  {
+    category: "dynamiser_commentaire",
+    imgSrc: img3,
+    imgAlt: "Photo du projet dynamiser un commentaire",
+    title: "Dynamiser un Commentaire",
+    modalData: {
+      titre: "Dynamiser un Commentaire",
+      date: "Novembre 2023",
+      description:
+        "Cette mission consiste à dynamiser un espace commentaire afin d'y faire apparaître un nouveau directement dans la liste au moment où l'on valide le formulaire, avec réinitialisation des champs, sans aucun rechargement de la page et affichage d'un message d'erreur.",
+      technologies: ["HTML", "CSS", "JavaScript", "GitHub"],
+      lien: "https://github.com/Nathi33/dynamiser_commentaire.git",
+      lienTexte: "Dynamiser un commentaire",
+      images: [
+        {
+          src: img8,
+        },
+        {
+          src: img9,
+        },
+      ],
+    },
+  },
+];
 
 //Initialisation des refs pour les propriétés de la modal
 const modalVisible = ref(false);
@@ -62,41 +131,18 @@ const modalDescription = ref("");
 const modalTechnologies = ref([]);
 const modalLien = ref("");
 const modalLienTexte = ref("");
+const modalImages = ref([]);
 
 //Fonction pour ouvrir la modal
-const openModal = (titre) => {
-  if (titre === "Contenu CV") {
-    modalVisible.value = true;
-    modalTitre.value = "Mon Curriculum Vitae";
-    modalDate.value = "Juillet 2023";
-    modalDescription.value =
-      "Cette réalisation est le premier projet fait durant mon apprentissage au sein du Centre Européen de Formation. L'objectif était de mettre en application mes connaissances en HTML et CSS acquises afin de créer un CV en ligne dynamique.";
-    modalTechnologies.value = ["HTML", "CSS", "GitHub"];
-    modalLien.value = "https://github.com/Nathi33/depot-cv.git";
-    modalLienTexte.value = "Mon CV";
-  } else if (titre === "Contenu CDC") {
-    modalVisible.value = true;
-    modalTitre.value = "Réalisation Cahier des Charges";
-    modalDate.value = "Octobre 2023";
-    modalDescription.value =
-      "Etablissement d'un cahier des charges dans un projet de création de site web e-commerce pour une entreprise de vente de chaussettes. ";
-    modalTechnologies.value = ["Word", "Miro", "GlooMaps"];
-    modalLien.value =
-      "https://drive.google.com/file/d/1-TaB3q3MqGEAv8nX8KMRMBaqoJvCidJt/view?usp=sharing";
-    modalLienTexte.value = "Cahier des charges";
-  } else if (titre === "Contenu DEC") {
-    modalVisible.value = true;
-    modalTitre.value = "Dynamisme du Commentaire";
-    modalDate.value = "Novembre 2023";
-    modalDescription.value =
-      "Cette mission consiste à dynamiser un espace commentaire afin d'y faire apparaître un nouveau directement dans la liste au moment où l'on valide le formulaire, avec réinitialisation des champs, sans aucun rechargement de la page et affichage d'un message d'erreur.";
-    modalTechnologies.value = ["HTML", "CSS", "JavaScript", "GitHub"];
-    modalLien.value = "https://github.com/Nathi33/dynamiser_commentaire.git";
-    modalLienTexte.value = "Dynamiser un commentaire";
-  }
-
-  //Afficher la modal
+const openModal = (project) => {
   modalVisible.value = true;
+  modalTitre.value = project.modalData.titre;
+  modalDate.value = project.modalData.date;
+  modalDescription.value = project.modalData.description;
+  modalTechnologies.value = project.modalData.technologies;
+  modalLien.value = project.modalData.lien;
+  modalLienTexte.value = project.modalData.lienTexte;
+  modalImages.value = project.modalData.images;
 };
 
 //Fonction pour fermer la modal
@@ -148,7 +194,7 @@ const toggleModal = () => {
 }
 
 .card h3 {
-  font-size: 0.6rem;
+  font-size: 0.875rem;
   text-align: center;
 }
 

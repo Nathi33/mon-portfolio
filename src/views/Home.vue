@@ -5,6 +5,7 @@
   <AboutMe />
   <Skills />
   <ProjectDetail />
+
   <Contact />
 
   <Foot_er />

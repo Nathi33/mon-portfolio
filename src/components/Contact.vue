@@ -1,51 +1,63 @@
 <template>
-  <section id="contact">
-    <div class="contact-container">
-      <h1>Contact</h1>
+  <main class="contactme">
+    <section id="contact">
+      <div class="contact-container">
+        <h2>Contact</h2>
 
-      <form ref="formRef" action="#" class="form" @submit.prevent="submitForm">
-        <label for="firstname">
-          <input
-            type="text"
-            v-model="firstname"
-            name="firstname"
-            id="firstname"
-            placeholder="Nom"
-            required
-        /></label>
-        <label for="lastname">
-          <input
-            type="text"
-            v-model="lastname"
-            name="lastname"
-            id="lastname"
-            placeholder="Prénom"
-          />
-        </label>
-        <label for="object">
-          <input
-            type="text"
-            v-model="object"
-            name="object"
-            id="object"
-            placeholder="Objet"
-            required
-          />
-        </label>
-        <label for="message">
-          <textarea
-            v-model="message"
-            name="message"
-            id="message"
-            placeholder="Message"
-            required
-          ></textarea>
-        </label>
+        <form
+          ref="formRef"
+          action="#"
+          class="form"
+          @submit.prevent="submitForm"
+        >
+          <label for="firstname"
+            >Nom
+            <input
+              type="text"
+              v-model="firstname"
+              name="firstname"
+              id="firstname"
+              placeholder="Nom"
+              required
+          /></label>
+          <label for="lastname"
+            >Prénom
+            <input
+              type="text"
+              v-model="lastname"
+              name="lastname"
+              id="lastname"
+              placeholder="Prénom"
+            />
+          </label>
+          <label for="object"
+            >Objet
+            <input
+              type="text"
+              v-model="object"
+              name="object"
+              id="object"
+              placeholder="Objet"
+              required
+            />
+          </label>
+          <label for="message"
+            >Message
+            <textarea
+              v-model="message"
+              name="message"
+              id="message"
+              placeholder="Message"
+              required
+            ></textarea
+            >Message
+          </label>
 
-        <input type="submit" class="btn" value="Envoyer" />
-      </form>
-    </div>
-  </section>
+          <input type="submit" class="btn" value="Envoyer" />
+        </form>
+      </div>
+    </section>
+  </main>
 </template>
 
 <script setup>
@@ -87,8 +99,12 @@ const submitForm = () => {
 </script>
 
 <style scoped>
-h1 {
+h2 {
   font-size: 2.5rem;
+}
+
+label {
+  color: transparent;
 }
 .contact-container {
   background-color: rgba(182, 121, 182, 0.849);

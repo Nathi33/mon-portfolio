@@ -1,13 +1,18 @@
 <template>
+  <Head_er />
   <div class="error-container">
-    <img src="../assets/images/oops.png" alt="oops" />
+    <img src="../assets/images/oops.png" alt="image oops page error 404" />
     <h1 class="error-title">Error 404 - Page Not Found</h1>
     <p class="error-message">Désolé,nous ne trouvons pas la page demandée.</p>
     <router-link class="link" to="/">Retourner à la page d'accueil</router-link>
   </div>
+  <Foot_er />
 </template>
 
-<script setup></script>
+<script setup>
+import Head_er from "@/components/Head_er.vue";
+import Foot_er from "@/components/Foot_er.vue";
+</script>
 
 <style scoped>
 .error-container {
