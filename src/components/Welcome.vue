@@ -1,20 +1,21 @@
 <template>
-  <main class="welcome_hero">
-    <section id="welcome">
-      <div class="hero">
-        <div class="hero_left">
-          <h1 class="title">Bienvenue sur mon Portfolio</h1>
-          <h2 class="sentence">Nath Drnt, une jeune développeuse en herbe</h2>
-        </div>
-
-        <div class="hero_right">
-          <figure class="hero-img">
-            <img src="../assets/images/avatar.png" alt="Avatar Nath" />
-          </figure>
-        </div>
+  <section id="welcome">
+    <div class="hero">
+      <div class="hero_left">
+        <h1 class="title">Bienvenue sur mon Portfolio</h1>
+        <h2 class="sentence">Nath Drnt, une jeune développeuse en herbe</h2>
       </div>
-    </section>
-  </main>
+
+      <div class="hero_right">
+        <figure class="hero-img">
+          <img
+            src="../assets/images/avatar.png"
+            alt="Illustration de Nath Drnt, développeuse web"
+          />
+        </figure>
+      </div>
+    </div>
+  </section>
 </template>
 
 <script setup></script>

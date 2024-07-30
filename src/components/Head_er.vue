@@ -1,44 +1,45 @@
 <template>
   <header class="header">
     <h2 class="logo">
-      <a @click="scrollToSection('welcome')">Nath Drnt</a>
+      <a @click.prevent="navigateAndScroll('welcome')">Nath Drnt</a>
     </h2>
 
     <nav class="navBar">
       <ul class="menu_navBar">
         <li>
-          <!--Permet de souligner lorsque l'élément du menu est  actif-->
+          <!-- Active permet de souligner lorsque l'élément du menu est  actif-->
+          <!-- Prevent permet d'empêcher le comportement par défaut des liens -->
           <a
             :class="{ active: activeSection === 'welcome' }"
-            @click="scrollToSection('welcome')"
+            @click.prevent="navigateAndScroll('welcome')"
             >Accueil</a
           >
         </li>
         <li>
           <a
             :class="{ active: activeSection === 'aboutMe' }"
-            @click="scrollToSection('aboutMe')"
+            @click.prevent="navigateAndScroll('aboutMe')"
             >A propos</a
           >
         </li>
         <li>
           <a
             :class="{ active: activeSection === 'skills' }"
-            @click="scrollToSection('skills')"
+            @click.prevent="navigateAndScroll('skills')"
             >Compétences</a
           >
         </li>
         <li>
           <a
             :class="{ active: activeSection === 'projectDetail' }"
-            @click="scrollToSection('projectDetail')"
+            @click.prevent="navigateAndScroll('projectDetail')"
             >Projets</a
           >
         </li>
         <li>
           <a
             :class="{ active: activeSection === 'contact' }"
-            @click="scrollToSection('contact')"
+            @click.prevent="navigateAndScroll('contact')"
             >Contact</a
           >
         </li>
@@ -48,10 +49,23 @@
 </template>
 
 <script setup>
-import { ref } from "vue";
+import { ref, nextTick } from "vue";
+import { useRouter } from "vue-router";
 
 const activeSection = ref(null);
+const router = useRouter();
 
+// navigateAndScroll permet de naviguer vers la page d'accueil grâce à router.push
+// nextTick permet d'attendre le chargement de la page d'accueil avant de faire défiler vers la section correspondante
+const navigateAndScroll = (sectionId) => {
+  router.push("/").then(() => {
+    nextTick(() => {
+      scrollToSection(sectionId);
+    });
+  });
+};
+
+// scrollToSection permet de faire défiler la page vers la section correspondante
 const scrollToSection = (sectionId) => {
   const section = document.getElementById(sectionId);
   if (section) {

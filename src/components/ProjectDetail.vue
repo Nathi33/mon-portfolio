@@ -1,39 +1,37 @@
 <template>
-  <main class="projects">
-    <section id="projectDetail">
-      <div class="project_global">
-        <h2 class="project_title">Projets</h2>
+  <section id="projectDetail">
+    <div class="project_global">
+      <h2 class="project_title">Projets</h2>
 
-        <div class="project">
-          <!-- Boucle pour générer les modales à partir du tableau projects -->
-          <div
-            class="card"
-            v-for="(project, index) in projects"
-            :key="index"
-            :data-category="project.category"
-          >
-            <img :src="project.imgSrc" alt="project.imgAlt" />
-            <h3>{{ project.title }}</h3>
-            <div class="card_overlay">
-              <button class="btn-open" @click="openModal(project)">+</button>
-            </div>
+      <div class="project">
+        <!-- Boucle pour générer les modales à partir du tableau projects -->
+        <div
+          class="card"
+          v-for="(project, index) in projects"
+          :key="index"
+          :data-category="project.category"
+        >
+          <img :src="project.imgSrc" alt="project.imgAlt" />
+          <h3>{{ project.title }}</h3>
+          <div class="card_overlay">
+            <button class="btn-open" @click="openModal(project)">+</button>
           </div>
-
-          <Modal
-            :modalVisible="modalVisible"
-            :titre="modalTitre"
-            :date="modalDate"
-            :description="modalDescription"
-            :technologies="modalTechnologies"
-            :lien="modalLien"
-            :lienTexte="modalLienTexte"
-            :images="modalImages"
-            @toggleModal="toggleModal"
-          />
         </div>
+
+        <Modal
+          :modalVisible="modalVisible"
+          :titre="modalTitre"
+          :date="modalDate"
+          :description="modalDescription"
+          :technologies="modalTechnologies"
+          :lien="modalLien"
+          :lienTexte="modalLienTexte"
+          :images="modalImages"
+          @toggleModal="toggleModal"
+        />
       </div>
-    </section>
-  </main>
+    </div>
+  </section>
 </template>
 
 <script setup>
@@ -55,7 +53,7 @@ const projects = [
   {
     category: "cv",
     imgSrc: img1,
-    imgAlt: "Photo du CV",
+    imgAlt: "Aperçu du CV de Nath Drnt",
     title: "Mon Curriculum Vitae",
     modalData: {
       titre: "Mon Curriculum Vitae",
@@ -68,9 +66,11 @@ const projects = [
       images: [
         {
           src: img4,
+          description: "Détail du CV - section 1",
         },
         {
           src: img5,
+          description: "Détail du CV - section 2",
         },
       ],
     },
@@ -78,7 +78,7 @@ const projects = [
   {
     category: "cahier_charges",
     imgSrc: img2,
-    imgAlt: "Photo du projet la Socketterie",
+    imgAlt: "Aperçu du projet la Socketterie",
     title: "Réalisation Cahier des Charges",
     modalData: {
       titre: "Réalisation Cahier des Charges",
@@ -91,9 +91,11 @@ const projects = [
       images: [
         {
           src: img6,
+          description: "Détail du projet La socketterie - section 1",
         },
         {
           src: img7,
+          description: "Détail du projet La socketterie - section 2",
         },
       ],
     },
@@ -101,7 +103,7 @@ const projects = [
   {
     category: "dynamiser_commentaire",
     imgSrc: img3,
-    imgAlt: "Photo du projet dynamiser un commentaire",
+    imgAlt: "Aperçu du projet dynamiser un commentaire",
     title: "Dynamiser un Commentaire",
     modalData: {
       titre: "Dynamiser un Commentaire",
@@ -114,9 +116,11 @@ const projects = [
       images: [
         {
           src: img8,
+          description: "Détail du projet Dynamiser un commentaire - section 1",
         },
         {
           src: img9,
+          description: "Détail du projet Dynamiser un commentaire - section 2",
         },
       ],
     },
