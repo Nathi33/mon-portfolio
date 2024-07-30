@@ -1,27 +1,28 @@
 <template>
-  <main class="my_skills">
-    <section id="skills">
-      <div class="skills">
-        <h2>Compétences</h2>
-        <div class="skills_description">
-          <figure class="technique">
-            <h3>Compétences techniques</h3>
-            <img src="../assets/images/Logos.jpg" alt="logos compétences" />
-          </figure>
-          <div class="transverse">
-            <h3>Compétences transversales</h3>
-            <ul>
-              <li>Autonomie</li>
-              <li>Rigueur et efficacité</li>
-              <li>Aisance relationnelle</li>
-              <li>Ecoute et adaptabilité</li>
-              <li>Travail en équipe</li>
-            </ul>
-          </div>
+  <section id="skills">
+    <div class="skills">
+      <h2>Compétences</h2>
+      <div class="skills_description">
+        <figure class="technique">
+          <h3>Compétences techniques</h3>
+          <img
+            src="../assets/images/Logos.jpg"
+            alt="Logos des technologies maîtrisées comme HTML, CSS, JavaScript, et plus"
+          />
+        </figure>
+        <div class="transverse">
+          <h3>Compétences transversales</h3>
+          <ul>
+            <li>Autonomie</li>
+            <li>Rigueur et efficacité</li>
+            <li>Aisance relationnelle</li>
+            <li>Ecoute et adaptabilité</li>
+            <li>Travail en équipe</li>
+          </ul>
         </div>
       </div>
-    </section>
-  </main>
+    </div>
+  </section>
 </template>
 
 <script setup></script>

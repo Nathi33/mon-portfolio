@@ -1,12 +1,14 @@
 <template>
   <Head_er />
 
-  <Welcome />
-  <AboutMe />
-  <Skills />
-  <ProjectDetail />
+  <main>
+    <Welcome />
+    <AboutMe />
+    <Skills />
+    <ProjectDetail />
 
-  <Contact />
+    <Contact />
+  </main>
 
   <Foot_er />
 </template>

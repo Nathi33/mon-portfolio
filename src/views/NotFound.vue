@@ -1,7 +1,10 @@
 <template>
   <Head_er />
   <div class="error-container">
-    <img src="../assets/images/oops.png" alt="image oops page error 404" />
+    <img
+      src="../assets/images/oops.png"
+      alt="Illustration de page d'erreur 404 avec texte 'Oops'"
+    />
     <h1 class="error-title">Error 404 - Page Not Found</h1>
     <p class="error-message">Désolé,nous ne trouvons pas la page demandée.</p>
     <router-link class="link" to="/">Retourner à la page d'accueil</router-link>

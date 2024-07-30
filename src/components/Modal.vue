@@ -17,7 +17,10 @@
         <button class="btn-modal" @click="toggleModal">&times;</button>
         <h4>{{ titre }}</h4>
         <figure class="date">
-          <img src="../assets/images/calendrier.png" alt="logo calendrier" />
+          <img
+            src="../assets/images/calendrier.png"
+            alt="Icône de calendrier"
+          />
           <p>{{ date }}</p>
         </figure>
         <h5>Description</h5>

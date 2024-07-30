@@ -1,63 +1,60 @@
 <template>
-  <main class="contactme">
-    <section id="contact">
-      <div class="contact-container">
-        <h2>Contact</h2>
+  <section id="contact">
+    <div class="contact-container">
+      <h2>Contact</h2>
 
-        <form
-          ref="formRef"
-          action="#"
-          class="form"
-          @submit.prevent="submitForm"
-        >
-          <label for="firstname"
-            >Nom
-            <input
-              type="text"
-              v-model="firstname"
-              name="firstname"
-              id="firstname"
-              placeholder="Nom"
-              required
-          /></label>
-          <label for="lastname"
-            >Prénom
-            <input
-              type="text"
-              v-model="lastname"
-              name="lastname"
-              id="lastname"
-              placeholder="Prénom"
-            />
-          </label>
-          <label for="object"
-            >Objet
-            <input
-              type="text"
-              v-model="object"
-              name="object"
-              id="object"
-              placeholder="Objet"
-              required
-            />
-          </label>
-          <label for="message"
-            >Message
-            <textarea
-              v-model="message"
-              name="message"
-              id="message"
-              placeholder="Message"
-              required
-            ></textarea
-            >Message
-          </label>
+      <form ref="formRef" action="#" class="form" @submit.prevent="submitForm">
+        <label for="firstname"
+          >Nom
+          <input
+            type="text"
+            v-model="firstname"
+            name="firstname"
+            id="firstname"
+            placeholder="Nom"
+            required
+        /></label>
+        <label for="lastname"
+          >Prénom
+          <input
+            type="text"
+            v-model="lastname"
+            name="lastname"
+            id="lastname"
+            placeholder="Prénom"
+          />
+        </label>
+        <label for="object"
+          >Objet
+          <input
+            type="text"
+            v-model="object"
+            name="object"
+            id="object"
+            placeholder="Objet"
+            required
+          />
+        </label>
+        <label for="message"
+          >Message
+          <textarea
+            v-model="message"
+            name="message"
+            id="message"
+            placeholder="Message"
+            required
+          ></textarea
+          >Message
+        </label>
 
-          <input type="submit" class="btn" value="Envoyer" />
-        </form>
-      </div>
-    </section>
-  </main>
+        <input type="submit" class="btn" value="Envoyer" />
+      </form>
+
+      <p v-if="formSubmitted" class="confirmation-message">
+        Votre message a bien été envoyé !
+      </p>
+    </div>
+  </section>
 </template>
 
 <script setup>
@@ -73,28 +70,26 @@ const firstname = ref("");
 const lastname = ref("");
 const object = ref("");
 const message = ref("");
+const formSubmitted = ref(false);
 
 //Fonction pour envoyer le formulaire
 const submitForm = () => {
-  //Création du corps du mail
-  const messageBody = `
-          Nom: ${firstname.value} 
-          Prénom: ${lastname.value}
-          Objet: ${object.value}
-          Message: ${message.value}`;
+  // Simule l'envoi du formulaire en affichant un message de confirmation
+  formSubmitted.value = true;
 
-  //Création du lien mailto
-  const mailtolink = `milano_134@hotmail.com?subject=Nouveau%20message%20du%20formulaire%20de%20contact&body=${encodeURIComponent(
-    messageBody
-  )}`;
+  // Réinitialise les valeurs des champs du formulaire
+  firstname.value = "";
+  lastname.value = "";
+  object.value = "";
+  message.value = "";
 
-  //Affichage de la confirmation d'envoi
-  alert(
-    "Votre message a bien été envoyé à l'adresse mail suivante : milano_134@hotmail.com!"
-  );
-
-  //Réinitialisation des champs du formulaire
+  // Réinitialise les champs du formulaire
   formRef.value.reset();
+
+  // Réininitialise le message d'envoi après 3 secondes
+  setTimeout(() => {
+    formSubmitted.value = false;
+  }, 3000);
 };
 </script>
 

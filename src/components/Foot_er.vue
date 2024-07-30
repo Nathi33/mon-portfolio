@@ -7,28 +7,42 @@
           target="_blank"
           href="https://fr.linkedin.com/"
           rel="noopener noreferrer"
-          ><img src="../assets/images/logo-linked.png" alt="Logo Linkedin" />
+          ><img
+            src="../assets/images/logo-linked.png"
+            alt="Lien vers le profil LinkedIn de Nath Drnt"
+          />
         </a>
         <a
           target="_blank"
           href="https://twitter.com/?lang=fr"
           rel="noopener noreferrer"
-          ><img src="../assets/images/logo-twitter.png" alt="Logo Twitter" />
+          ><img
+            src="../assets/images/logo-twitter.png"
+            alt="Lien vers le profil Twitter de Nath Drnt"
+          />
         </a>
         <a
           target="_blank"
           href="https://instagram.com/"
           rel="noopener noreferrer"
-          ><img src="../assets/images/instagram.png" alt="logo Instagram"
+          ><img
+            src="../assets/images/instagram.png"
+            alt="Lien vers le profil Instagram de Nath Drnt"
         /></a>
         <a
           target="_blank"
           href="https://facebook.com/"
           rel="noopener noreferrer"
-          ><img src="../assets/images/facebook.png" alt="Logo Facebook" />
+          ><img
+            src="../assets/images/facebook.png"
+            alt="Lien vers le profil Facebook de Nath Drnt"
+          />
         </a>
         <a target="_blank" href="https://github.com/" rel="noopener noreferrer"
-          ><img src="../assets/images/logo-git.png" alt="Logo GitHub" />
+          ><img
+            src="../assets/images/logo-git.png"
+            alt="Lien vers le profil GitHub de Nath Drnt"
+          />
         </a>
       </figure>
       <small
