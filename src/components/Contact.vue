@@ -61,8 +61,6 @@
 import { ref } from "vue";
 import { useRouter } from "vue-router";
 
-const emailAddress = ref("nathi33@hotmail.com");
-
 const formRef = ref(null);
 
 const router = useRouter();
@@ -73,6 +71,9 @@ const lastname = ref("");
 const object = ref("");
 const message = ref("");
 const formSubmitted = ref(false);
+
+//Appel de la variablnpm run e d'environnement
+const emailAddress = import.meta.env.VITE_APP_EMAIL;
 
 //Fonction pour envoyer le formulaire
 const submitForm = () => {
