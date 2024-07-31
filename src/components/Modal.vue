@@ -9,7 +9,7 @@
           v-for="(image, index) in images"
           :key="index"
           :src="image.src"
-          alt="Image du projet"
+          :alt="image.alt"
         />
       </figure>
 
