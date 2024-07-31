@@ -11,7 +11,7 @@
           :key="index"
           :data-category="project.category"
         >
-          <img :src="project.imgSrc" alt="project.imgAlt" />
+          <img :src="project.imgSrc" :alt="project.imgAlt" />
           <h3>{{ project.title }}</h3>
           <div class="card_overlay">
             <button class="btn-open" @click="openModal(project)">+</button>
@@ -66,11 +66,11 @@ const projects = [
       images: [
         {
           src: img4,
-          description: "Détail du CV - section 1",
+          alt: "Détail du CV - section 1",
         },
         {
           src: img5,
-          description: "Détail du CV - section 2",
+          alt: "Détail du CV - section 2",
         },
       ],
     },
@@ -91,11 +91,11 @@ const projects = [
       images: [
         {
           src: img6,
-          description: "Détail du projet La socketterie - section 1",
+          alt: "Détail du projet La socketterie - section 1",
         },
         {
           src: img7,
-          description: "Détail du projet La socketterie - section 2",
+          alt: "Détail du projet La socketterie - section 2",
         },
       ],
     },
@@ -116,11 +116,11 @@ const projects = [
       images: [
         {
           src: img8,
-          description: "Détail du projet Dynamiser un commentaire - section 1",
+          alt: "Détail du projet Dynamiser un commentaire - section 1",
         },
         {
           src: img9,
-          description: "Détail du projet Dynamiser un commentaire - section 2",
+          alt: "Détail du projet Dynamiser un commentaire - section 2",
         },
       ],
     },

@@ -51,7 +51,7 @@
       </form>
 
       <p v-if="formSubmitted" class="confirmation-message">
-        Votre message a bien été envoyé !
+        Votre message a bien été envoyé à {{ emailAddress }} !
       </p>
     </div>
   </section>
@@ -60,6 +60,8 @@
 <script setup>
 import { ref } from "vue";
 import { useRouter } from "vue-router";
+
+const emailAddress = ref("nathi33@hotmail.com");
 
 const formRef = ref(null);
 
